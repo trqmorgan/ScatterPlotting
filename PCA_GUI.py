@@ -380,7 +380,8 @@ class MainFrame(wx.Frame):
 
         wx.StaticText(self.selections6, label="Select shape", pos=(10, 287))
         self.shapecombo = wx.ComboBox(self.selections6, -1, pos=(140, 285),
-                                      size=(100, 25), value='Circle', choices=['Circle','Triangle', 'Octagon', 'Square', 'Pentagon', 'Plus', 'Star', 'Diamond'],
+                                      size=(100, 25), value='Circle', choices=['Circle', 'Triangle', 'Octagon', 'Square',
+                                                                               'Pentagon', 'Plus', 'Star', 'Diamond'],
                                       style=wx.TE_PROCESS_ENTER)
         self.shapecombo.Bind(wx.EVT_TEXT, self.select_shape)
 
@@ -392,9 +393,11 @@ class MainFrame(wx.Frame):
         self.canvas2 = FigCanvas(self.graphing2, -1, self.fig_PCA)
         self.canvas3 = FigCanvas(self.graphing3, -1, self.fig_scatter)
         self.canvas5 = FigCanvas(self.graphing5, -1, self.fig_tern)
+        # initialse dictionarys to hold colours and shapes
         self.colordict = {'All': 'b'}
-        self.shapedict = {'All': ('Circle','o')}
-        self.mplshapedict = {'Circle':'o','Triangle':'^', 'Octagon':'8', 'Square':'s', 'Pentagon':'p', 'Plus':'P', 'Star':'*', 'Diamond':'D'}
+        self.shapedict = {'All': ('Circle', 'o')}
+        self.mplshapedict = {'Circle': 'o', 'Triangle': '^', 'Octagon': '8', 'Square': 's', 'Pentagon': 'p', 'Plus': 'P',
+                             'Star': '*', 'Diamond': 'D'}
 
         # --------------------------------------------------------------------------------------------------------------
 
